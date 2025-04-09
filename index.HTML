@@ -13,5 +13,30 @@
         <a href="#">Gallery</a>
         <a href="#">Contact_Us</a>
     </div>
+    <!--Slide show-->
+    <section>
+        <img class="mySlides" src="ndovu.jpg" style="height: 700px; width: 100%;">
+        <img class="mySlides" src="sunset.png" style="height: 700px; width: 100%;">
+        <img class="mySlides" src="zebra.png" style="height: 700px; width: 100%;">
+    </section>
+    <script>
+        //Automatic Slideshow - change image evry 3 secs
+        var myIndex = 0;
+            carousel();
+
+            function carousel() {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                myIndex++;
+                if (myIndex > slides.length) { myIndex = 1; }
+                slides[myIndex - 1].style.display = "block";
+                setTimeout(carousel, 3000);
+            }
+    
+        
+    </script>
 </body>
 </html>
